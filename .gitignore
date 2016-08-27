@@ -1,0 +1,16 @@
+build
+*.iml
+*.mvn
+*.ipr
+*.iws
+.DS_Store
+.idea
+build
+out
+/classes/
+.classpath
+.project
+.settings
+*.jar
+target
+
