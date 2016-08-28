@@ -1,6 +1,8 @@
 package edu.uw.service;
 
 import java.util.Date;
+
+import edu.uw.exceptions.PersonServiceException;
 import edu.uw.model.PersonEntity;
 import edu.uw.ui.model.People;
 import edu.uw.ui.model.PeopleResult;
@@ -12,7 +14,7 @@ public interface PersonService {
 	 * @param person
 	 * @return
 	 */
-	public PersonEntity save(PersonEntity person) throws Exception;
+	public PersonEntity save(PersonEntity person) throws PersonServiceException;
 
 	/**
 	 * save a person
@@ -21,7 +23,7 @@ public interface PersonService {
 	 * @return
 	 */
 
-	public PersonEntity save(People people) throws Exception;
+	public PersonEntity save(People people) throws PersonServiceException;
 
 	/**
 	 * This method allows client to search people and filter with affiliation
@@ -34,7 +36,7 @@ public interface PersonService {
 	 * @param size
 	 * @return
 	 */
-	public PeopleResult findAll(String affiliation, Date activeOn, Integer zip, int page, int size) throws Exception;
+	public PeopleResult findAll(String affiliation, Date activeOn, Integer zip, int page, int size) throws PersonServiceException;
 
 	/**
 	 * Allows client to retrieve single person by person id
@@ -42,5 +44,6 @@ public interface PersonService {
 	 * @param personId
 	 * @return
 	 */
-	public People findOne(Long personId) throws Exception;
+	public People findOne(Long personId) throws PersonServiceException;
+
 }

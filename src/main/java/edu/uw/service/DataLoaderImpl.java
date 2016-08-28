@@ -49,15 +49,9 @@ public class DataLoaderImpl implements DataLoader {
 
 		do {
 
-			try {
-				person = reader.read();
-				if (person != null) {
-					personService.save(person);
-				}
-
-			} catch (Exception e) {
-				logger.error("Error while processing file::" + e.getMessage());
-				throw e;
+			person = reader.read();
+			if (person != null) {
+				personService.save(person);
 			}
 
 		} while (person != null);
