@@ -66,13 +66,14 @@ Output Header
 
 - **GET /people** with zero or more query parameters as shown below to retrieve a JSON representation of search results
 
-               1. Selet GET operation
-				   2. Enter http://localhost:8080/people/100027
-				   3. Hit on Send Button to execute operation
+                1. Selet GET operation
+                2. Enter http://localhost:8080/people/100022
+                3. Hit on Send Button to execute operation
+                
 Output
  
 						{
-			  "personId": 100027,
+			  "personId": 100022,
 			  "firstName": "Perkins",
 			  "lastName": "Grace",
 			  "affiliations": [
