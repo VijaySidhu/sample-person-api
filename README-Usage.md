@@ -86,15 +86,17 @@ Resources Accessible
 
 To retrieve a list of people filtered to a single affiliation.If a person has more than one affiliation, it shows all affiliations, e.g. [ "student", "staff" ].
 
-1. Enter Below Url
-2. http://localhost:8080/people?affiliation=student&zip=98100 
+		1. Enter Below Url
+		2. http://localhost:8080/people?affiliation=student&zip=98100 
 
 
-To filter to only return people who were active on a specific date, 
-1. Enter Below Url
-2. http://localhost:8080/people?activeOn=02-Feb-14
+To filter to only return people who were active on a specific date,
+ 
+	1. Enter Below Url
+	2. http://localhost:8080/people?activeOn=02-Feb-14
 
 Output
+
 									{
 									  "people": [
 										{
@@ -141,10 +143,12 @@ Output
 
 
 To be filtered by a zip/postal code. 
-1. Enter below Url
-2. http://localhost:8080/people?zip=98100
+
+	1. Enter below Url
+	2. http://localhost:8080/people?zip=98100
 
 Output
+
 					{
 					  "people": [
 						{
@@ -222,35 +226,3 @@ _Below are parameters that we can pass_
 - **page**: the page of the search results to provide
 - **size**: the size of page to return the search results
 
-The response body should provide an indication of the total count that matches the query parameters, independent of the page size returned.  
-
-_Example search_
-
-    GET /people?affiliation=student&activeOn=2016-09-08&zip=98100&page=1&size=20
-
-    200 OK
-    {
-        "people": [
-            {
-                "id": "200035",
-                "firstName": "Shauna", 
-                "lastName": "Alarcon",
-                "affiliations": [ "student" ],
-                "birthDate": "1997-01-03",
-                "lastEnrolledTerm": "Fall",
-                "lastEnrolledYear": "2014"
-                "address": {
-                    "line1": "7 Weathervane Ave",
-                    "line2": "Apt 2",
-                    "city": "Seattle",
-                    "state": "WA",
-                    "zip": "98100"
-                }
-            }
-        ],
-        "total": 1
-        "page": 1
-        "size": 20
-    }
-    
-  
