@@ -34,7 +34,7 @@ Resources Accessible
 
                    1. http://localhost:8080/people
                    2. Select raw and JSON(application/json)
-				       3. Enter below data and hit on SEND button to POST new person    
+                   3. Enter below data and hit on SEND button to POST new person    
 								   
 								   {
 					  "personId": 100022,
@@ -57,16 +57,20 @@ Resources Accessible
 						"zip": 98100
 					  }
 					}
-	 Output 201 Created
+	 
+Output Header
+	 
+	 201 Created
     Location →http://localhost:8080/people/100022	
 
 
 - **GET /people** with zero or more query parameters as shown below to retrieve a JSON representation of search results
 
-                   1. Selet GET operation
+               1. Selet GET operation
 				   2. Enter http://localhost:8080/people/100027
 				   3. Hit on Send Button to execute operation
-	Output 
+Output
+ 
 						{
 			  "personId": 100027,
 			  "firstName": "Perkins",
