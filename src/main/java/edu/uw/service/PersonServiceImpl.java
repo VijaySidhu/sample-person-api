@@ -30,18 +30,18 @@ public class PersonServiceImpl implements PersonService {
 	PersonRepository repository;
 
 	@Override
-	public PersonEntity save(PersonEntity person) {
+	public PersonEntity save(PersonEntity person) throws Exception {
 		return repository.save(person);
 	}
 
 	@Override
-	public PersonEntity save(People person) {
+	public PersonEntity save(People person) throws Exception {
 		return repository.save(uiTOEntity(person));
 	}
 
 	@Override
 	@Transactional(readOnly = true)
-	public PeopleResult findAll(String affiliation, Date activeOn, Integer zip, int page, int size) {
+	public PeopleResult findAll(String affiliation, Date activeOn, Integer zip, int page, int size) throws Exception {
 
 		List<People> peoples = new ArrayList<People>();
 
@@ -64,7 +64,7 @@ public class PersonServiceImpl implements PersonService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public People findOne(Long personId) {
+	public People findOne(Long personId) throws Exception {
 		return entityToUi(repository.findOne(PersonSpecifications.hasPersonId(personId)));
 	}
 
@@ -113,7 +113,9 @@ public class PersonServiceImpl implements PersonService {
 	}
 
 	private People entityToUi(PersonEntity entity) {
-
+		if (null == entity) {
+			return null;
+		}
 		List<String> affs = new ArrayList<String>();
 		entity.getAffiliatons().stream().forEach(aff -> {
 			affs.add(aff.getName());

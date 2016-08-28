@@ -1,6 +1,9 @@
 package edu.uw.service;
 
 import java.io.InputStream;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
@@ -8,10 +11,13 @@ import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.stereotype.Component;
+
 import edu.uw.model.PersonEntity;
 
 @Component
 public class DataLoaderImpl implements DataLoader {
+
+	private static final Logger logger = LoggerFactory.getLogger(DataLoaderImpl.class);
 
 	@Autowired
 	PersonService personService;
@@ -20,7 +26,7 @@ public class DataLoaderImpl implements DataLoader {
 	 * This method process csv file
 	 */
 	@Override
-	public void process(InputStream inputStream) {
+	public void process(InputStream inputStream) throws Exception {
 
 		FlatFileItemReader<PersonEntity> reader = new FlatFileItemReader<PersonEntity>();
 		reader.setResource(new InputStreamResource(inputStream));
@@ -50,7 +56,8 @@ public class DataLoaderImpl implements DataLoader {
 				}
 
 			} catch (Exception e) {
-				e.printStackTrace();
+				logger.error("Error while processing file::" + e.getMessage());
+				throw e;
 			}
 
 		} while (person != null);

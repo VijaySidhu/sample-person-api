@@ -12,7 +12,7 @@ public interface PersonService {
 	 * @param person
 	 * @return
 	 */
-	public PersonEntity save(PersonEntity person);
+	public PersonEntity save(PersonEntity person) throws Exception;
 
 	/**
 	 * save a person
@@ -21,7 +21,7 @@ public interface PersonService {
 	 * @return
 	 */
 
-	public PersonEntity save(People people);
+	public PersonEntity save(People people) throws Exception;
 
 	/**
 	 * This method allows client to search people and filter with affiliation
@@ -34,12 +34,13 @@ public interface PersonService {
 	 * @param size
 	 * @return
 	 */
-	public PeopleResult findAll(String affiliation, Date activeOn, Integer zip, int page, int size);
+	public PeopleResult findAll(String affiliation, Date activeOn, Integer zip, int page, int size) throws Exception;
 
 	/**
 	 * Allows client to retrieve single person by person id
+	 * 
 	 * @param personId
 	 * @return
 	 */
-	public People findOne(Long personId);
+	public People findOne(Long personId) throws Exception;
 }
