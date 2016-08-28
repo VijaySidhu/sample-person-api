@@ -18,19 +18,22 @@ Resources Accessible
 
 
 - **POST /people** to upload a CSV file with a Content-Type of multipart/form-data  
+
                    1. http://localhost:8080/people/upload
                    2. Select Body tab
                    3. Choose form-data radio button
                    4. type file in Key and click on choose file button and select people.csv file
                    5. Hit on SEND button to post file
 				   
-	Output Status 201 Created
+    Output Status 201 Created
     Message in Body File Uploaded Successfully	
   				   
 - **POST /people** to subject a JSON representation of a person with a Content-Type of application/json  
+
                    1. http://localhost:8080/people
                    2. Select raw and JSON(application/json)
-				   3.  Enter below data and hit on SEND button to POST new person    
+				       3. Enter below data and hit on SEND button to POST new person    
+								   
 								   {
 					  "personId": 100022,
 					  "firstName": "Perkins",
@@ -52,7 +55,7 @@ Resources Accessible
 						"zip": 98100
 					  }
 					}
-	Output 201 Created
+	 Output 201 Created
     Location →http://localhost:8080/people/100022	
 
 
