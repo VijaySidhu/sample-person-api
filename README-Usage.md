@@ -25,8 +25,10 @@ Resources Accessible
                    4. type file in Key and click on choose file button and select people.csv file
                    5. Hit on SEND button to post file
 				   
-    Output Status 201 Created
-    Message in Body File Uploaded Successfully	
+   Output 
+   
+	    - Status 201 Created
+	    - Message in Body File Uploaded Successfully	
   				   
 - **POST /people** to subject a JSON representation of a person with a Content-Type of application/json  
 
