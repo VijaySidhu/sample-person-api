@@ -4,9 +4,9 @@ UW Sample Person API
 Prequsite
 ---------
 
-Java 8
-Maven 3.x
-Postman Rest client to test api
+	1. Java 8
+	2. Maven 3.x
+	3. Postman Rest client to test api
 
 
 How to run API
