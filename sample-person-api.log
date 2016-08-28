@@ -1451,3 +1451,53 @@ java.lang.Exception: null
 2016-08-28 11:26:09.010  INFO 8932 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2016-08-28 11:26:09.010  INFO 8932 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
 2016-08-28 11:26:09.026  INFO 8932 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 11:44:04.985  INFO 8524 --- [main] edu.uw.SamplePersonApiApplication        : Starting SamplePersonApiApplication on VijaySidhu-HP with PID 8524 (C:\workspace-sts-3.7.release\sample-person-api\target\classes started by VijaySidhu in C:\workspace-sts-3.7.release\sample-person-api)
+2016-08-28 11:44:04.985  INFO 8524 --- [main] edu.uw.SamplePersonApiApplication        : No active profile set, falling back to default profiles: default
+2016-08-28 11:44:05.032  INFO 8524 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3baea153: startup date [Sun Aug 28 11:44:05 PDT 2016]; root of context hierarchy
+2016-08-28 11:44:05.628  INFO 8524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-08-28 11:44:06.073  INFO 8524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f6ab8734] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-28 11:44:06.441  INFO 8524 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-28 11:44:06.441  INFO 8524 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-28 11:44:06.441  INFO 8524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-28 11:44:06.535  INFO 8524 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-28 11:44:06.535  INFO 8524 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1503 ms
+2016-08-28 11:44:06.644  INFO 8524 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-28 11:44:06.644  INFO 8524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-28 11:44:06.644  INFO 8524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-28 11:44:06.644  INFO 8524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-28 11:44:06.660  INFO 8524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-28 11:44:06.910  INFO 8524 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-08-28 11:44:06.910  INFO 8524 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-28 11:44:06.972  INFO 8524 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-08-28 11:44:06.972  INFO 8524 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-08-28 11:44:06.972  INFO 8524 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-08-28 11:44:07.003  INFO 8524 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-08-28 11:44:07.098  INFO 8524 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-08-28 11:44:07.458  INFO 8524 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 11:44:07.473  INFO 8524 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 11:44:07.504  INFO 8524 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 11:44:07.952  INFO 8524 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3baea153: startup date [Sun Aug 28 11:44:05 PDT 2016]; root of context hierarchy
+2016-08-28 11:44:08.014  INFO 8524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[GET]}" onto public edu.uw.ui.model.PeopleResult edu.uw.controller.PeopleResource.findAll(java.lang.String,java.lang.String,java.lang.Integer,int,int) throws java.lang.Exception
+2016-08-28 11:44:08.014  INFO 8524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> edu.uw.controller.PeopleResource.createPeople(edu.uw.ui.model.People,org.springframework.web.util.UriComponentsBuilder) throws edu.uw.exceptions.SystemException
+2016-08-28 11:44:08.014  INFO 8524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/upload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> edu.uw.controller.PeopleResource.uploadPeople(org.springframework.web.multipart.MultipartFile) throws edu.uw.exceptions.SystemException
+2016-08-28 11:44:08.014  INFO 8524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/{id}],methods=[GET]}" onto public edu.uw.ui.model.People edu.uw.controller.PeopleResource.findOne(java.lang.Long) throws edu.uw.exceptions.PersonNotFoundException,edu.uw.exceptions.SystemException
+2016-08-28 11:44:08.014  INFO 8524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-28 11:44:08.014  INFO 8524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-28 11:44:08.069  INFO 8524 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 11:44:08.070  INFO 8524 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 11:44:08.102  INFO 8524 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 11:44:08.304  INFO 8524 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-28 11:44:08.351  INFO 8524 --- [main] org.mortbay.log                          : Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+2016-08-28 11:44:08.367  INFO 8524 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-28 11:44:08.367  INFO 8524 --- [main] edu.uw.SamplePersonApiApplication        : Started SamplePersonApiApplication in 3.679 seconds (JVM running for 6.007)
+2016-08-28 11:44:16.413  INFO 8524 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-28 11:44:16.413  INFO 8524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-28 11:44:16.429  INFO 8524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2016-08-28 11:47:10.784  INFO 8524 --- [http-nio-8080-exec-5] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-08-28 12:06:36.731  INFO 8524 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3baea153: startup date [Sun Aug 28 11:44:05 PDT 2016]; root of context hierarchy
+2016-08-28 12:06:36.731  INFO 8524 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-08-28 12:06:36.731  INFO 8524 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 12:06:36.747  INFO 8524 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 12:06:36.747  INFO 8524 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
