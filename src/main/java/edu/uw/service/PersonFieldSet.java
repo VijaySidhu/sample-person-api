@@ -6,32 +6,27 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.FieldSet;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindException;
 
+import edu.uw.exceptions.SystemException;
 import edu.uw.model.AddressEntity;
 import edu.uw.model.AffiliationEntity;
 import edu.uw.model.PersonEntity;
 
 public class PersonFieldSet implements FieldSetMapper<PersonEntity> {
 
+	private static final Logger logger = LoggerFactory.getLogger(PersonFieldSet.class);
+
 	@Override
 	public PersonEntity mapFieldSet(FieldSet fieldSet) throws BindException {
 
 		PersonEntity person = new PersonEntity();
 		try {
-
-			// 0---100001,
-			// 1--Perkins,
-			// 2---Grace,
-			// 3--"student,staff",
-			// 4---2-Jan-82
-			// 5--,Spring 2009,
-			// 6---2-Feb-14,
-			// 7---9-Mar-15,
-			// 8---"19 Maple Ln, Seattle, WA 98100"
-
 			person.setPersonId(fieldSet.readLong(0));
 			person.setFirstName(fieldSet.readString(1));
 			person.setLastName(fieldSet.readString(2));
@@ -89,7 +84,9 @@ public class PersonFieldSet implements FieldSetMapper<PersonEntity> {
 
 			person.setAffiliatons(affiliations);
 		} catch (ParseException e) {
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
+			SystemException syException = new SystemException(HttpStatus.INTERNAL_SERVER_ERROR.toString(), "Internal System Error");
+			throw new RuntimeException(syException);
 		}
 
 		return person;

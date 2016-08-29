@@ -1737,3 +1737,297 @@ java.lang.Exception: null
 2016-08-28 17:26:50.272  INFO 7444 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2016-08-28 17:26:50.272  INFO 7444 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
 2016-08-28 17:26:50.287  INFO 7444 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:03:30.648  INFO 7560 --- [main] edu.uw.SamplePersonApiApplicationTests   : Starting SamplePersonApiApplicationTests on VijaySidhu-HP with PID 7560 (started by VijaySidhu in C:\workspace-sts-3.7.release\sample-person-api)
+2016-08-28 18:03:30.648  INFO 7560 --- [main] edu.uw.SamplePersonApiApplicationTests   : No active profile set, falling back to default profiles: default
+2016-08-28 18:03:30.680  INFO 7560 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@45385f75: startup date [Sun Aug 28 18:03:30 PDT 2016]; root of context hierarchy
+2016-08-28 18:03:31.626  INFO 7560 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54d1e103] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-28 18:03:32.048  INFO 7560 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:03:32.049  INFO 7560 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-28 18:03:32.111  INFO 7560 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-08-28 18:03:32.111  INFO 7560 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-08-28 18:03:32.111  INFO 7560 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-08-28 18:03:32.142  INFO 7560 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-08-28 18:03:32.237  INFO 7560 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-08-28 18:03:32.711  INFO 7560 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:03:32.726  INFO 7560 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:03:32.757  INFO 7560 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:03:33.284  INFO 7560 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@45385f75: startup date [Sun Aug 28 18:03:30 PDT 2016]; root of context hierarchy
+2016-08-28 18:03:33.331  INFO 7560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/upload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> edu.uw.controller.PeopleResource.uploadPeople(org.springframework.web.multipart.MultipartFile) throws edu.uw.exceptions.SystemException
+2016-08-28 18:03:33.331  INFO 7560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> edu.uw.controller.PeopleResource.createPeople(edu.uw.ui.model.People,org.springframework.web.util.UriComponentsBuilder) throws edu.uw.exceptions.SystemException
+2016-08-28 18:03:33.347  INFO 7560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[GET]}" onto public edu.uw.ui.model.PeopleResult edu.uw.controller.PeopleResource.findAll(java.lang.String,java.lang.String,java.lang.Integer,int,int) throws edu.uw.exceptions.SystemException,edu.uw.exceptions.NoRecordFoundException
+2016-08-28 18:03:33.347  INFO 7560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/{id}],methods=[GET]}" onto public edu.uw.ui.model.People edu.uw.controller.PeopleResource.findOne(java.lang.Long) throws edu.uw.exceptions.PersonNotFoundException,edu.uw.exceptions.SystemException
+2016-08-28 18:03:33.347  INFO 7560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-28 18:03:33.347  INFO 7560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-28 18:03:33.378  INFO 7560 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:03:33.378  INFO 7560 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:03:33.393  INFO 7560 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:03:33.572  INFO 7560 --- [main] edu.uw.SamplePersonApiApplicationTests   : Started SamplePersonApiApplicationTests in 3.148 seconds (JVM running for 3.712)
+2016-08-28 18:03:33.596  INFO 7560 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@45385f75: startup date [Sun Aug 28 18:03:30 PDT 2016]; root of context hierarchy
+2016-08-28 18:03:33.599  INFO 7560 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:03:33.599  INFO 7560 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:03:33.605  INFO 7560 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:03:43.302  INFO 2668 --- [main] edu.uw.SamplePersonApiApplication        : Starting SamplePersonApiApplication on VijaySidhu-HP with PID 2668 (C:\workspace-sts-3.7.release\sample-person-api\target\classes started by VijaySidhu in C:\workspace-sts-3.7.release\sample-person-api)
+2016-08-28 18:03:43.318  INFO 2668 --- [main] edu.uw.SamplePersonApiApplication        : No active profile set, falling back to default profiles: default
+2016-08-28 18:03:43.349  INFO 2668 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c5a57da: startup date [Sun Aug 28 18:03:43 PDT 2016]; root of context hierarchy
+2016-08-28 18:03:44.300  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8cffc091] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-28 18:03:44.643  INFO 2668 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-28 18:03:44.659  INFO 2668 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-28 18:03:44.659  INFO 2668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-28 18:03:44.722  INFO 2668 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-28 18:03:44.722  INFO 2668 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1373 ms
+2016-08-28 18:03:44.816  INFO 2668 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-28 18:03:44.831  INFO 2668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-28 18:03:44.831  INFO 2668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-28 18:03:44.831  INFO 2668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-28 18:03:44.831  INFO 2668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-28 18:03:45.069  INFO 2668 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:03:45.085  INFO 2668 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-28 18:03:45.147  INFO 2668 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-08-28 18:03:45.147  INFO 2668 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-08-28 18:03:45.147  INFO 2668 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-08-28 18:03:45.178  INFO 2668 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-08-28 18:03:45.257  INFO 2668 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-08-28 18:03:45.602  INFO 2668 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:03:45.618  INFO 2668 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:03:45.648  INFO 2668 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:03:46.022  INFO 2668 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c5a57da: startup date [Sun Aug 28 18:03:43 PDT 2016]; root of context hierarchy
+2016-08-28 18:03:46.065  INFO 2668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/upload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> edu.uw.controller.PeopleResource.uploadPeople(org.springframework.web.multipart.MultipartFile) throws edu.uw.exceptions.SystemException
+2016-08-28 18:03:46.081  INFO 2668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> edu.uw.controller.PeopleResource.createPeople(edu.uw.ui.model.People,org.springframework.web.util.UriComponentsBuilder) throws edu.uw.exceptions.SystemException
+2016-08-28 18:03:46.081  INFO 2668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[GET]}" onto public edu.uw.ui.model.PeopleResult edu.uw.controller.PeopleResource.findAll(java.lang.String,java.lang.String,java.lang.Integer,int,int) throws edu.uw.exceptions.SystemException,edu.uw.exceptions.NoRecordFoundException
+2016-08-28 18:03:46.081  INFO 2668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/{id}],methods=[GET]}" onto public edu.uw.ui.model.People edu.uw.controller.PeopleResource.findOne(java.lang.Long) throws edu.uw.exceptions.PersonNotFoundException,edu.uw.exceptions.SystemException
+2016-08-28 18:03:46.081  INFO 2668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-28 18:03:46.081  INFO 2668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-28 18:03:46.112  INFO 2668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:03:46.112  INFO 2668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:03:46.143  INFO 2668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:03:46.316  INFO 2668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-28 18:03:46.363  INFO 2668 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-28 18:03:46.363  INFO 2668 --- [main] edu.uw.SamplePersonApiApplication        : Started SamplePersonApiApplication in 3.329 seconds (JVM running for 5.554)
+2016-08-28 18:04:10.223  INFO 2668 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-28 18:04:10.224  INFO 2668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-28 18:04:10.245  INFO 2668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2016-08-28 18:04:10.567 ERROR 2668 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: ++++++++] with root cause
+
+java.lang.RuntimeException: ++++++++
+	at edu.uw.controller.PeopleResource.uploadPeople(PeopleResource.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2016-08-28 18:04:27.645  INFO 2668 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c5a57da: startup date [Sun Aug 28 18:03:43 PDT 2016]; root of context hierarchy
+2016-08-28 18:04:27.661  INFO 2668 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-08-28 18:04:27.661  INFO 2668 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:04:27.661  INFO 2668 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:04:27.676  INFO 2668 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:08:29.912  INFO 1244 --- [main] edu.uw.SamplePersonApiApplicationTests   : Starting SamplePersonApiApplicationTests on VijaySidhu-HP with PID 1244 (started by VijaySidhu in C:\workspace-sts-3.7.release\sample-person-api)
+2016-08-28 18:08:29.912  INFO 1244 --- [main] edu.uw.SamplePersonApiApplicationTests   : No active profile set, falling back to default profiles: default
+2016-08-28 18:08:29.943  INFO 1244 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@45385f75: startup date [Sun Aug 28 18:08:29 PDT 2016]; root of context hierarchy
+2016-08-28 18:08:30.880  INFO 1244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54d1e103] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-28 18:08:31.303  INFO 1244 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:08:31.318  INFO 1244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-28 18:08:31.381  INFO 1244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-08-28 18:08:31.381  INFO 1244 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-08-28 18:08:31.381  INFO 1244 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-08-28 18:08:31.412  INFO 1244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-08-28 18:08:31.490  INFO 1244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-08-28 18:08:31.974  INFO 1244 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:08:31.990  INFO 1244 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:08:32.028  INFO 1244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:08:32.518  INFO 1244 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@45385f75: startup date [Sun Aug 28 18:08:29 PDT 2016]; root of context hierarchy
+2016-08-28 18:08:32.596  INFO 1244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> edu.uw.controller.PeopleResource.createPeople(edu.uw.ui.model.People,org.springframework.web.util.UriComponentsBuilder) throws edu.uw.exceptions.SystemException
+2016-08-28 18:08:32.596  INFO 1244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/upload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> edu.uw.controller.PeopleResource.uploadPeople(org.springframework.web.multipart.MultipartFile) throws edu.uw.exceptions.SystemException
+2016-08-28 18:08:32.596  INFO 1244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[GET]}" onto public edu.uw.ui.model.PeopleResult edu.uw.controller.PeopleResource.findAll(java.lang.String,java.lang.String,java.lang.Integer,int,int) throws edu.uw.exceptions.SystemException,edu.uw.exceptions.NoRecordFoundException
+2016-08-28 18:08:32.596  INFO 1244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/{id}],methods=[GET]}" onto public edu.uw.ui.model.People edu.uw.controller.PeopleResource.findOne(java.lang.Long) throws edu.uw.exceptions.PersonNotFoundException,edu.uw.exceptions.SystemException
+2016-08-28 18:08:32.596  INFO 1244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-28 18:08:32.596  INFO 1244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-28 18:08:32.627  INFO 1244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:08:32.627  INFO 1244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:08:32.659  INFO 1244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:08:32.815  INFO 1244 --- [main] edu.uw.SamplePersonApiApplicationTests   : Started SamplePersonApiApplicationTests in 3.123 seconds (JVM running for 3.632)
+2016-08-28 18:08:32.846  INFO 1244 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@45385f75: startup date [Sun Aug 28 18:08:29 PDT 2016]; root of context hierarchy
+2016-08-28 18:08:32.846  INFO 1244 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:08:32.846  INFO 1244 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:08:32.846  INFO 1244 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:08:42.063  INFO 5280 --- [main] edu.uw.SamplePersonApiApplication        : Starting SamplePersonApiApplication on VijaySidhu-HP with PID 5280 (C:\workspace-sts-3.7.release\sample-person-api\target\classes started by VijaySidhu in C:\workspace-sts-3.7.release\sample-person-api)
+2016-08-28 18:08:42.066  INFO 5280 --- [main] edu.uw.SamplePersonApiApplication        : No active profile set, falling back to default profiles: default
+2016-08-28 18:08:42.102  INFO 5280 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2772ba35: startup date [Sun Aug 28 18:08:42 PDT 2016]; root of context hierarchy
+2016-08-28 18:08:43.037  INFO 5280 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3e8d42de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-28 18:08:43.423  INFO 5280 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-28 18:08:43.439  INFO 5280 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-28 18:08:43.439  INFO 5280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-28 18:08:43.485  INFO 5280 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-28 18:08:43.485  INFO 5280 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1383 ms
+2016-08-28 18:08:43.609  INFO 5280 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-28 18:08:43.609  INFO 5280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-28 18:08:43.609  INFO 5280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-28 18:08:43.609  INFO 5280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-28 18:08:43.609  INFO 5280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-28 18:08:43.876  INFO 5280 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:08:43.891  INFO 5280 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-28 18:08:43.954  INFO 5280 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-08-28 18:08:43.954  INFO 5280 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-08-28 18:08:43.954  INFO 5280 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-08-28 18:08:43.985  INFO 5280 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-08-28 18:08:44.080  INFO 5280 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-08-28 18:08:44.425  INFO 5280 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:08:44.440  INFO 5280 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:08:44.471  INFO 5280 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:08:44.880  INFO 5280 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2772ba35: startup date [Sun Aug 28 18:08:42 PDT 2016]; root of context hierarchy
+2016-08-28 18:08:44.943  INFO 5280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/upload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> edu.uw.controller.PeopleResource.uploadPeople(org.springframework.web.multipart.MultipartFile) throws edu.uw.exceptions.SystemException
+2016-08-28 18:08:44.943  INFO 5280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[GET]}" onto public edu.uw.ui.model.PeopleResult edu.uw.controller.PeopleResource.findAll(java.lang.String,java.lang.String,java.lang.Integer,int,int) throws edu.uw.exceptions.SystemException,edu.uw.exceptions.NoRecordFoundException
+2016-08-28 18:08:44.943  INFO 5280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> edu.uw.controller.PeopleResource.createPeople(edu.uw.ui.model.People,org.springframework.web.util.UriComponentsBuilder) throws edu.uw.exceptions.SystemException
+2016-08-28 18:08:44.943  INFO 5280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/{id}],methods=[GET]}" onto public edu.uw.ui.model.People edu.uw.controller.PeopleResource.findOne(java.lang.Long) throws edu.uw.exceptions.PersonNotFoundException,edu.uw.exceptions.SystemException
+2016-08-28 18:08:44.943  INFO 5280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-28 18:08:44.943  INFO 5280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-28 18:08:44.974  INFO 5280 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:08:44.974  INFO 5280 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:08:45.005  INFO 5280 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:08:45.163  INFO 5280 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-28 18:08:45.210  INFO 5280 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-28 18:08:45.210  INFO 5280 --- [main] edu.uw.SamplePersonApiApplication        : Started SamplePersonApiApplication in 3.424 seconds (JVM running for 5.621)
+2016-08-28 18:08:57.924  INFO 5280 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-28 18:08:57.924  INFO 5280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-28 18:08:57.939  INFO 5280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2016-08-28 18:09:45.363  INFO 5280 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2772ba35: startup date [Sun Aug 28 18:08:42 PDT 2016]; root of context hierarchy
+2016-08-28 18:09:45.378  INFO 5280 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-08-28 18:09:45.378  INFO 5280 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:09:45.378  INFO 5280 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:09:45.394  INFO 5280 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:12:01.656  INFO 4564 --- [main] edu.uw.SamplePersonApiApplicationTests   : Starting SamplePersonApiApplicationTests on VijaySidhu-HP with PID 4564 (started by VijaySidhu in C:\workspace-sts-3.7.release\sample-person-api)
+2016-08-28 18:12:01.656  INFO 4564 --- [main] edu.uw.SamplePersonApiApplicationTests   : No active profile set, falling back to default profiles: default
+2016-08-28 18:12:01.687  INFO 4564 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1c9b0314: startup date [Sun Aug 28 18:12:01 PDT 2016]; root of context hierarchy
+2016-08-28 18:12:02.638  INFO 4564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4a75887d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-28 18:12:03.044  INFO 4564 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:12:03.060  INFO 4564 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-28 18:12:03.106  INFO 4564 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-08-28 18:12:03.106  INFO 4564 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-08-28 18:12:03.122  INFO 4564 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-08-28 18:12:03.153  INFO 4564 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-08-28 18:12:03.231  INFO 4564 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-08-28 18:12:03.730  INFO 4564 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:12:03.746  INFO 4564 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:12:03.762  INFO 4564 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:12:04.292  INFO 4564 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1c9b0314: startup date [Sun Aug 28 18:12:01 PDT 2016]; root of context hierarchy
+2016-08-28 18:12:04.354  INFO 4564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[GET]}" onto public edu.uw.ui.model.PeopleResult edu.uw.controller.PeopleResource.findAll(java.lang.String,java.lang.String,java.lang.Integer,int,int) throws edu.uw.exceptions.SystemException,edu.uw.exceptions.NoRecordFoundException
+2016-08-28 18:12:04.354  INFO 4564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> edu.uw.controller.PeopleResource.createPeople(edu.uw.ui.model.People,org.springframework.web.util.UriComponentsBuilder) throws edu.uw.exceptions.SystemException
+2016-08-28 18:12:04.354  INFO 4564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/upload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> edu.uw.controller.PeopleResource.uploadPeople(org.springframework.web.multipart.MultipartFile) throws edu.uw.exceptions.SystemException
+2016-08-28 18:12:04.354  INFO 4564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/{id}],methods=[GET]}" onto public edu.uw.ui.model.People edu.uw.controller.PeopleResource.findOne(java.lang.Long) throws edu.uw.exceptions.PersonNotFoundException,edu.uw.exceptions.SystemException
+2016-08-28 18:12:04.354  INFO 4564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-28 18:12:04.354  INFO 4564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-28 18:12:04.386  INFO 4564 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:12:04.386  INFO 4564 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:12:04.401  INFO 4564 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:12:04.557  INFO 4564 --- [main] edu.uw.SamplePersonApiApplicationTests   : Started SamplePersonApiApplicationTests in 3.135 seconds (JVM running for 3.677)
+2016-08-28 18:12:04.573  INFO 4564 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1c9b0314: startup date [Sun Aug 28 18:12:01 PDT 2016]; root of context hierarchy
+2016-08-28 18:12:04.573  INFO 4564 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:12:04.573  INFO 4564 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:12:04.573  INFO 4564 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:12:10.726  INFO 4448 --- [main] edu.uw.SamplePersonApiApplication        : Starting SamplePersonApiApplication on VijaySidhu-HP with PID 4448 (C:\workspace-sts-3.7.release\sample-person-api\target\classes started by VijaySidhu in C:\workspace-sts-3.7.release\sample-person-api)
+2016-08-28 18:12:10.726  INFO 4448 --- [main] edu.uw.SamplePersonApiApplication        : No active profile set, falling back to default profiles: default
+2016-08-28 18:12:10.773  INFO 4448 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2177e85: startup date [Sun Aug 28 18:12:10 PDT 2016]; root of context hierarchy
+2016-08-28 18:12:11.662  INFO 4448 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$98b94a4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-28 18:12:12.021  INFO 4448 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-28 18:12:12.037  INFO 4448 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-28 18:12:12.037  INFO 4448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-28 18:12:12.083  INFO 4448 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-28 18:12:12.083  INFO 4448 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1326 ms
+2016-08-28 18:12:12.193  INFO 4448 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-28 18:12:12.193  INFO 4448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-28 18:12:12.193  INFO 4448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-28 18:12:12.193  INFO 4448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-28 18:12:12.193  INFO 4448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-28 18:12:12.458  INFO 4448 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:12:12.473  INFO 4448 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-28 18:12:12.520  INFO 4448 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-08-28 18:12:12.520  INFO 4448 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-08-28 18:12:12.536  INFO 4448 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-08-28 18:12:12.551  INFO 4448 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-08-28 18:12:12.629  INFO 4448 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-08-28 18:12:12.973  INFO 4448 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:12:12.988  INFO 4448 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-08-28 18:12:13.004  INFO 4448 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:12:13.409  INFO 4448 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2177e85: startup date [Sun Aug 28 18:12:10 PDT 2016]; root of context hierarchy
+2016-08-28 18:12:13.487  INFO 4448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/upload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> edu.uw.controller.PeopleResource.uploadPeople(org.springframework.web.multipart.MultipartFile) throws edu.uw.exceptions.SystemException
+2016-08-28 18:12:13.487  INFO 4448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> edu.uw.controller.PeopleResource.createPeople(edu.uw.ui.model.People,org.springframework.web.util.UriComponentsBuilder) throws edu.uw.exceptions.SystemException
+2016-08-28 18:12:13.487  INFO 4448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people],methods=[GET]}" onto public edu.uw.ui.model.PeopleResult edu.uw.controller.PeopleResource.findAll(java.lang.String,java.lang.String,java.lang.Integer,int,int) throws edu.uw.exceptions.SystemException,edu.uw.exceptions.NoRecordFoundException
+2016-08-28 18:12:13.487  INFO 4448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/people/{id}],methods=[GET]}" onto public edu.uw.ui.model.People edu.uw.controller.PeopleResource.findOne(java.lang.Long) throws edu.uw.exceptions.PersonNotFoundException,edu.uw.exceptions.SystemException
+2016-08-28 18:12:13.487  INFO 4448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-28 18:12:13.503  INFO 4448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-28 18:12:13.519  INFO 4448 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:12:13.519  INFO 4448 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:12:13.550  INFO 4448 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-28 18:12:13.676  INFO 4448 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-28 18:12:13.738  INFO 4448 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-28 18:12:13.738  INFO 4448 --- [main] edu.uw.SamplePersonApiApplication        : Started SamplePersonApiApplication in 3.293 seconds (JVM running for 5.471)
+2016-08-28 18:12:32.536  INFO 4448 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-28 18:12:32.536  INFO 4448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-28 18:12:32.549  INFO 4448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2016-08-28 18:12:58.665  INFO 4448 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-08-28 18:13:24.409  INFO 4448 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2177e85: startup date [Sun Aug 28 18:12:10 PDT 2016]; root of context hierarchy
+2016-08-28 18:13:24.409  INFO 4448 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-08-28 18:13:24.424  INFO 4448 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-08-28 18:13:24.424  INFO 4448 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-08-28 18:13:24.441  INFO 4448 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete

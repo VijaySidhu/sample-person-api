@@ -2,8 +2,6 @@ package edu.uw.service;
 
 import java.io.InputStream;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
@@ -17,7 +15,6 @@ import edu.uw.model.PersonEntity;
 @Component
 public class DataLoaderImpl implements DataLoader {
 
-	private static final Logger logger = LoggerFactory.getLogger(DataLoaderImpl.class);
 
 	@Autowired
 	PersonService personService;

@@ -11,8 +11,8 @@ public class PersonNotFoundException extends Exception {
 	 */
 	private static final long serialVersionUID = 5902510986154951287L;
 
-	public PersonNotFoundException() {
-
+	public PersonNotFoundException(String message) {
+		super(message);
 	}
 
 }

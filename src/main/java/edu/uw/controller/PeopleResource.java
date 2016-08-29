@@ -3,7 +3,6 @@ package edu.uw.controller;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.util.UriComponentsBuilder;
-
 import edu.uw.exceptions.NoRecordFoundException;
 import edu.uw.exceptions.PersonNotFoundException;
 import edu.uw.exceptions.PersonServiceException;
@@ -44,8 +42,7 @@ public class PeopleResource {
 	private static final Logger logger = LoggerFactory.getLogger(PeopleResource.class);
 
 	/**
-	 * This method allows client to upload csv file to db returns 201 if
-	 * Successful 400 for bad request
+	 * This method allows client to upload csv file to db.
 	 * 
 	 * @param file
 	 * @returns
@@ -75,24 +72,27 @@ public class PeopleResource {
 	 */
 	@PostMapping
 	public @ResponseBody ResponseEntity<Void> createPeople(@RequestBody People people, UriComponentsBuilder ucb) throws SystemException {
+		HttpHeaders headers = null;
 		try {
 			personService.save(people);
+			headers = new HttpHeaders();
+			headers.setLocation(ucb.path("/people/{id}").buildAndExpand(people.getPersonId()).toUri());
 		} catch (PersonServiceException personServiceExe) {
 			logger.error(personServiceExe.getMessage(), personServiceExe);
 			throw new SystemException(HttpStatus.INTERNAL_SERVER_ERROR.toString(), "Internal System Error");
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			throw new SystemException(HttpStatus.INTERNAL_SERVER_ERROR.toString(), "Internal System Error");
 		}
-		HttpHeaders headers = new HttpHeaders();
-		headers.setLocation(ucb.path("/people/{id}").buildAndExpand(people.getPersonId()).toUri());
+
 		return new ResponseEntity<>(headers, HttpStatus.CREATED);
 	}
 
 	/**
 	 * This resource allows client to retrieve list of people filtered to single
 	 * affiliation and if person has more than one affiliation it displays all
-	 * affiliations
-	 * 
-	 * This resource allows user to filter people who were active on specific
-	 * date
+	 * affiliations This resource allows user to filter people who were active
+	 * on specific date
 	 * 
 	 * @param affiliation
 	 * @param activeOnStr
@@ -104,7 +104,7 @@ public class PeopleResource {
 	 */
 
 	@GetMapping
-	public @ResponseBody PeopleResult findAll(@RequestParam(value = "affiliation", required = false) String affiliation, @RequestParam(value = "activeOn", required = false) String activeOnStr, @RequestParam(value = "zip", required = false) Integer zip, @RequestParam(value = "page", required = false, defaultValue = "1") int page, @RequestParam(value = "size", required = false, defaultValue = "20") int size) throws Exception {
+	public @ResponseBody PeopleResult findAll(@RequestParam(value = "affiliation", required = false) String affiliation, @RequestParam(value = "activeOn", required = false) String activeOnStr, @RequestParam(value = "zip", required = false) Integer zip, @RequestParam(value = "page", required = false, defaultValue = "1") int page, @RequestParam(value = "size", required = false, defaultValue = "100") int size) throws SystemException, NoRecordFoundException {
 		PeopleResult peopleResult = null;
 		Date activeOn = null;
 		try {
@@ -115,10 +115,14 @@ public class PeopleResource {
 		} catch (PersonServiceException personServiceExe) {
 			logger.error(personServiceExe.getMessage(), personServiceExe);
 			throw new SystemException(HttpStatus.INTERNAL_SERVER_ERROR.toString(), "Internal System Error");
+		} catch (ParseException parseException) {
+			logger.error(parseException.getMessage(), parseException);
+			throw new SystemException(HttpStatus.INTERNAL_SERVER_ERROR.toString(), "Internal System Error");
 		}
 		if (null != peopleResult && peopleResult.getTotal() < 1) {
-			logger.error("No record found");
-			throw new NoRecordFoundException();
+			NoRecordFoundException noRecrdFound = new NoRecordFoundException();
+			logger.error("No record found for parameters: Affiliation " + affiliation + " ActiveOn " + activeOnStr + " Zip " + zip, noRecrdFound);
+			throw noRecrdFound;
 		}
 
 		return peopleResult;
@@ -126,7 +130,6 @@ public class PeopleResource {
 
 	/**
 	 * This resource allow client to retrieve information of person by person id
-	 * return 404 if requested person not found
 	 * 
 	 * @param personId
 	 * @return
@@ -141,8 +144,9 @@ public class PeopleResource {
 			throw new SystemException(HttpStatus.INTERNAL_SERVER_ERROR.toString(), "Internal System Error");
 		}
 		if (null == person) {
-			logger.error("Requested person not found");
-			throw new PersonNotFoundException();
+			PersonNotFoundException personNotFound = new PersonNotFoundException("Person with Id " + String.valueOf(personId) + "not found");
+			logger.error(personNotFound.getMessage(), personNotFound);
+			throw personNotFound;
 		}
 		return person;
 	}
