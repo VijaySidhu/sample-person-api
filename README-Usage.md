@@ -1,7 +1,7 @@
 UW Sample Person API
 ========
 
-Prequsite
+Prerequisite
 ---------
 
 	1. Java 8
