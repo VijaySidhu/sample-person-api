@@ -83,4 +83,25 @@ public class PersonSpecifications {
 
 	}
 
+	public static Specification<PersonEntity> createSpecLastName(String LastName) {
+		Specifications<PersonEntity> spec = null;
+
+		if (StringUtils.isNoneBlank(LastName)) {
+			spec = Specifications.where(hasLastName(LastName));
+		}
+
+		return spec;
+
+	}
+
+	public static Specification<PersonEntity> hasLastName(String LastName) {
+		return new Specification<PersonEntity>() {
+			@Override
+			public Predicate toPredicate(Root<PersonEntity> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+
+				return cb.equal(root.join("LastName").get("lastName"), LastName);
+			}
+		};
+	}
+
 }

@@ -46,4 +46,5 @@ public interface PersonService {
 	 */
 	public People findOne(Long personId) throws PersonServiceException;
 
+	public PeopleResult findByLastName(String lastName,int page, int size) throws PersonServiceException;
 }

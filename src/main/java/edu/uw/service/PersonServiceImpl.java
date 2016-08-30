@@ -65,6 +65,17 @@ public class PersonServiceImpl implements PersonService {
 	}
 
 	@Override
+	public PeopleResult findByLastName(String lastName, int page, int size) throws PersonServiceException {
+		List<PersonEntity> personEntity = repository.findByLastName(lastName);
+		List<People> people = new ArrayList<>();
+		personEntity.stream().forEach(person -> {
+			people.add(entityToUi(person));
+		});
+
+		return new PeopleResult(people, 0, 0, 0);
+	}
+
+	@Override
 	@Transactional(readOnly = true)
 	public PeopleResult findAll(String affiliation, Date activeOn, Integer zip, int page, int size) throws PersonServiceException {
 		PeopleResult peopleResult = null;

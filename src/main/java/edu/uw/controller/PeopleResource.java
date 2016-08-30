@@ -88,6 +88,19 @@ public class PeopleResource {
 		return new ResponseEntity<>(headers, HttpStatus.CREATED);
 	}
 
+	@GetMapping
+	@RequestMapping("/lastName")
+	public @ResponseBody PeopleResult findByLastName(@RequestParam(value = "lastName") String lastName, @RequestParam(value = "page", required = false, defaultValue = "100") int page, @RequestParam(value = "size", required = false, defaultValue = "100") int size) {
+		PeopleResult people = null;
+		try {
+			people = personService.findByLastName(lastName, page, size);
+		} catch (PersonServiceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return people;
+	}
+
 	/**
 	 * This resource allows client to retrieve list of people filtered to single
 	 * affiliation and if person has more than one affiliation it displays all
